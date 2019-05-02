@@ -134,14 +134,16 @@ class App{
 
 		this.fundList = [];
 		//테스트용으로 펀드 몇개 넣어두기
-		// this.fundList.push(new Fund('A013', '스팀게임 구매', '2019-05-07', 40000));
-		// this.fundList.push(new Fund('b015', '롯데월드 놀러가기', '2019-05-02', 30000));
-		// this.fundList.push(new Fund('Z291', '기말고사 공부 자금', '2019-05-01', 20000)); //지난 펀드
-		// this.fundList.push(new Fund('k001', '프로그래밍 학습 자금', '2019-05-15', 75000));
-		// this.fundList[0].invest(10000);
-		// this.fundList[1].invest(15000);
-		// this.fundList[2].invest(5000);
-		// this.fundList[3].invest(3000);
+		this.fundList.push(new Fund('A013', '스팀게임 구매', '2019-05-07', 40000));
+		this.fundList.push(new Fund('b015', '롯데월드 놀러가기', '2019-05-02', 30000));
+		this.fundList.push(new Fund('Z291', '기말고사 공부 자금', '2019-05-01', 20000)); //지난 펀드
+		this.fundList.push(new Fund('k001', '프로그래밍 학습 자금', '2019-05-15', 75000));
+		this.fundList.push(new Fund('k001', '프로그래밍 학습 자금', '2019-05-20', 75000));
+		this.fundList.push(new Fund('k001', '프로그래밍 학습 자금', '2019-05-25', 75000));
+		this.fundList[0].invest(10000);
+		this.fundList[1].invest(15000);
+		this.fundList[2].invest(5000);
+		this.fundList[3].invest(3000);
 		
 		//테스트용으로 투자자 몇명 넣어두기
 		// this.investorList.push( new Investor(this.fundList[0], "최선한", 2000, "data:image/png;base64,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"));
@@ -176,6 +178,10 @@ class App{
 		document.querySelector(`#${target}`).classList.add("active");
 		//지정된 함수를 실행시켜서 해당 페이지를 로딩함.
 		this.lodingFunction[target]();
+		//해당페이지의 높이에 맞추어 컨테이너 크기 성장
+		let h = document.querySelector(`#${target}`).clientHeight;
+		console.log(h);
+		document.querySelector(".contents_inner_box").style.height = h + 'px';
 		e.preventDefault();
 	}
 
