@@ -150,7 +150,7 @@ class App{
 		this.fundContainer = document.querySelector(".fund-list");
 		this.investorContainer = document.querySelector(".investor-list");
 		//기본페이지 지정
-		this.navList[2].click();
+		this.navList[0].click();
 	}
 
 	drawSign(e){
@@ -176,6 +176,7 @@ class App{
 		document.querySelector(`#${target}`).classList.add("active");
 		//지정된 함수를 실행시켜서 해당 페이지를 로딩함.
 		this.lodingFunction[target]();
+		e.preventDefault();
 	}
 
 	loadingRegister(){
@@ -230,10 +231,8 @@ class App{
 		this.showAlert(result.msg);
 		if(result.result){
 			this.popup.querySelector("#btnClose").click();
-			this.navList[0].click();
-			
 			this.investorList.push( new Investor( fund, investName, money, this.signCanvas.toDataURL() ) );
-			
+			this.navList[0].click();
 		}
 	}
 
