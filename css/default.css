@@ -343,3 +343,33 @@ section.active {
 	height:100px;
 }
 
+#toastList {
+	position: fixed;
+	bottom:0;
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding:10px 30px;
+}
+
+.toast {
+	background-color: #009fe3;
+	position: relative;
+	color:#fff;
+	padding:10px 40px;
+	display: flex;
+	align-items: center;
+	height:55px;
+	border-radius: 10px;
+	margin-bottom:10px;
+	transition:all 0.5s;
+}
+
+.toast > .close {
+	position: absolute;
+	top:5px;
+	right:10px;
+	cursor: pointer;
+}
+
