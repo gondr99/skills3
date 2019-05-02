@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>창업지원펀드</title>
+    <!-- <script src="script/jquery.js"></script>
+<script src="script/jquery-ui.js"></script> -->
+    <script src="script/script.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/default.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!--Screen-->
+    <div class="screen">
+        <!--header-->
+        <div class="header">
+            <div class="header_inner">
+                <div class="logo">
+                    창업지원펀드
+                </div>
+                <div class="navigation">
+                    <ul>
+                        <li>
+                            <a href="#" title="펀드보기" class="activity" data-target="list">
+                                펀드보기
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="펀드등록" data-target="register">
+                                펀드등록
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="투자자목록" data-target="invest">
+                                투자자목록
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--contents-->
+        <div class="contents">
+            <div class="contents_inner">
+
+                <div class="contents_inner_box">
+                    <section id="list">
+                        <h2>펀드 리스트</h2>
+                        <div class="fund-list">
+
+                        </div>
+                    </section>
+
+                    <section id="register">
+                        <h2>펀드 등록</h2>
+                        <div class="form-container">
+                            <form>
+                                <div class="form-group">
+                                    <label for="fundNo">펀드번호</label>
+                                    <input type="text" id="fundNo">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fundName">창업펀드명</label>
+                                    <input type="text" id="fundName">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="endDate">모집마감일</label>
+                                    <input type="date" id="endDate">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="total">모집금액</label>
+                                    <input type="number" id="total">
+                                </div>
+
+                                <div class="button-row">
+                                    <button type="button" class="btn btn-blue">등록하기</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <section id="invest">
+                        <h2>투자자 리스트</h2>
+                        <div class="investor-list">
+                            <div class="investor">
+                                <span>A942</span>
+                                <span>스팀에서 게임사기</span>
+                                <span>최선한</span>
+                                <span>14000원</span>
+                                <button class="btn btn-blue">투자펀드계약서</button>
+                            </div>
+                            <div class="investor">
+                                <span>A942</span>
+                                <span>스팀에서 게임사기</span>
+                                <span>최선한</span>
+                                <span>14000원</span>
+                                <button class="btn btn-blue">투자펀드계약서</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="cl"></div>
+            </div>
+        </div>
+        <!-- end of content -->
+
+        <div class="popup">
+            <div class="inner">
+                <h2>투자하기</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="fundNo">펀드번호</label>
+                        <input type="text" readonly id="invest-no" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fundName">창업펀드명</label>
+                        <input type="text" readonly id="invest-fund" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endDate">투자자명</label>
+                        <input type="text" id="invest-name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="total">투자금액</label>
+                        <input type="number" id="invest-money">
+                    </div>
+                    <div class="form-group">
+                        <label for="sign">서명</label>
+                        <canvas id="sign"></canvas>
+                    </div>
+
+                    <div class="button-row">
+                        <button type="button" class="btn btn-blue" id="btnInvest">투자하기</button>
+                        <button class="btn btn-red" id="btnClose">닫기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
